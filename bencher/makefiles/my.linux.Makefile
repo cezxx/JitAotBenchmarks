@@ -37,7 +37,7 @@ COPTS := -O3 -fomit-frame-pointer
 	-ls
 	-mv $< $(TEST).java
 	-$(GRAALVM_JDKC) -d . $(TEST).java
-	-$(GRAALVM_NATIVE) $(TEST)
+	-$(GRAALVM_NATIVE) -J-Xmx14g -J-Xms8g -H:DeadlockWatchdogInterval=60 -H:+DeadlockWatchdogExitOnTimeout $(TEST)
 
 ########################################
 # java
