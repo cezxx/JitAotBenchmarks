@@ -1,0 +1,18 @@
+first run:
+Requests      [total, rate, throughput]         12000, 200.01, 200.01
+Duration      [total, attack, wait]             59.997s, 59.996s, 721.005µs
+Latencies     [min, mean, 50, 90, 95, 99, max]  510.47µs, 1.784ms, 858.758µs, 1.572ms, 1.93ms, 5.484ms, 296.857ms
+Bytes In      [total, mean]                     204000, 17.00
+Bytes Out     [total, mean]                     0, 0.00
+Success       [ratio]                           100.00%
+Status Codes  [code:count]                      200:12000
+
+second run:
+Requests      [total, rate, throughput]         12000, 200.01, 200.01
+Duration      [total, attack, wait]             59.997s, 59.996s, 696.888µs
+Latencies     [min, mean, 50, 90, 95, 99, max]  473.325µs, 769.403µs, 686.607µs, 833.557µs, 894.853µs, 3.243ms, 16.691ms
+Bytes In      [total, mean]                     204000, 17.00
+Bytes Out     [total, mean]                     0, 0.00
+Success       [ratio]                           100.00%
+Status Codes  [code:count]                      200:12000
+Error Set:
