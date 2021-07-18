@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id "com.palantir.graal" version "0.9.0"
+    id 'io.quarkus'
 }
 
 group 'pl.edu.utp'
@@ -8,30 +8,28 @@ version '0.1.0'
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
+
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
+    implementation 'io.quarkus:quarkus-arc'
+    implementation 'io.quarkus:quarkus-resteasy'
+    testImplementation 'io.quarkus:quarkus-junit5'
+    testImplementation 'io.rest-assured:rest-assured'
 }
 
-jar {
-    manifest {
-        attributes(
-                'Main-Class': 'pl.edu.utp.benchmark.fib.FibonacciIterativeNative'
-        )
-    }
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
 }
 
-graal {
-    mainClass 'pl.edu.utp.benchmark.fib.FibonacciIterativeNative'
-    outputName 'hello-world'
-    graalVersion '21.1.0'
-    javaVersion '11'
-    option '-H:DashboardDump=/Users/cezarykolaszewski/magisterka/JitAotBenchmarks/dashboard.dump -H:+DashboardAll'
+compileJava {
+    options.encoding = 'UTF-8'
+    options.compilerArgs << '-parameters'
 }
 
-
-test {
-    useJUnitPlatform()
+compileTestJava {
+    options.encoding = 'UTF-8'
 }
