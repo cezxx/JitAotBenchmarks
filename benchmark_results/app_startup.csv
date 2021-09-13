@@ -1,14 +1,14 @@
-type, time(sec)
-native,0.035
-native,0.029
-native,0.032
-native,0.025
-native,0.037
-native,0.028
-native,0.030
-native,0.027
-native,0.027
-native,0.031
+type,time(sec)
+graalvm_native,0.035
+graalvm_native,0.029
+graalvm_native,0.032
+graalvm_native,0.025
+graalvm_native,0.037
+graalvm_native,0.028
+graalvm_native,0.030
+graalvm_native,0.027
+graalvm_native,0.027
+graalvm_native,0.031
 graalvm-jdk,1.500
 graalvm-jdk,1.456
 graalvm-jdk,1.538

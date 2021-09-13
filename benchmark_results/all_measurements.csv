@@ -1,4 +1,4 @@
-name,lang,id,n,size(B),cpu(s),mem(KB),status,load,elapsed(s)
+name,compilation_method,id,n,size(B),cpu(s),mem(KB),status,load,elapsed(s)
 binarytrees,graalvm_jdk,1,21,539,9.821,1766380,0,4% 3% 3% 4% 98% 3% 6% 2%,8.054
 binarytrees,graalvm_jdk,1,21,539,9.765,1777392,0,4% 3% 3% 4% 2% 8% 3% 95%,7.957
 binarytrees,graalvm_jdk,1,21,539,9.765,1768236,0,2% 4% 3% 7% 97% 3% 2% 4%,8.028
